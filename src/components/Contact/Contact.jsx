@@ -2,7 +2,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" data-aos="fade-left">
       <h2>Contact Me</h2>
 
       <p>
@@ -12,7 +12,7 @@ function Contact() {
 
       <div className="contact-info">
         <p>
-          📧 Email: sainikethreddy@example.com
+          📧 Email: sainikethreddy@gamil.com
         </p>
 
         <p>
@@ -24,7 +24,7 @@ function Contact() {
         </p>
       </div>
 
-      <a href="mailto:sainikethreddy@example.com" className="contact-btn">
+      <a href="mailto:sainikethreddy@gamil.com" className="contact-btn">
         Send Email
       </a>
     </section>

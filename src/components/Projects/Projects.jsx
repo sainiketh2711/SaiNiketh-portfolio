@@ -23,7 +23,7 @@ function Projects() {
   ];
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects" data-aos="zoom-in">
       <h2>My Projects</h2>
 
       <div className="projects-container">
