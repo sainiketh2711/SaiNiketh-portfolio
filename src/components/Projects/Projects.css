@@ -1,41 +1,103 @@
 .projects {
-  padding: 70px 10%;
-  background-color: white;
+  padding: 80px 10%;
+  background: #ffffff;
   text-align: center;
 }
 
 .projects h2 {
-  font-size: 36px;
+  font-size: 40px;
   color: #1B4F72;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
 
 .project-card {
-  background-color: #f4f6f8;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.18);
 }
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
+  transition: 0.4s;
 }
 
-.project-card h3 {
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
   color: #1B4F72;
-  margin: 15px 0;
+  margin-bottom: 15px;
+  font-size: 24px;
 }
 
-.project-card p {
-  color: #444;
-  line-height: 1.5;
+.project-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.github-btn {
+  background: #24292e;
+  color: white;
+}
+
+.github-btn:hover {
+  background: black;
+}
+
+.demo-btn {
+  background: #1B4F72;
+  color: white;
+}
+
+.demo-btn:hover {
+  background: #38bdf8;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 70px 6%;
+  }
+
+  .projects h2 {
+    font-size: 32px;
+  }
 }

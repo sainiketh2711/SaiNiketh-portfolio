@@ -1,4 +1,5 @@
 import "./Projects.css";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 function Projects() {
   const projects = [
@@ -6,20 +7,26 @@ function Projects() {
       image: "/project1.jpeg",
       title: "Digital Thermometer with Alarm",
       description:
-        "An Arduino-based project that measures temperature and gives an alert using a buzzer."
+        "Arduino-based temperature monitoring system with LCD display and buzzer alarm.",
+      github: "https://github.com/sainiketh2711",
+      demo: "#",
     },
     {
       image: "/project2.jpeg",
-      title: "Portfolio Website",
+      title: "React Portfolio Website",
       description:
-        "A responsive personal portfolio website built using HTML, CSS, JavaScript and React."
+        "A modern responsive portfolio built using React, CSS and JavaScript.",
+      github: "https://github.com/sainiketh2711",
+      demo: "#",
     },
     {
       image: "/project3.jpeg",
       title: "AI & ML Project",
       description:
-        "A machine learning based project exploring data analysis and intelligent solutions."
-    }
+        "Machine Learning project for intelligent data analysis and prediction.",
+      github: "https://github.com/sainiketh2711",
+      demo: "#",
+    },
   ];
 
   return (
@@ -31,9 +38,31 @@ function Projects() {
           <div className="project-card" key={index}>
             <img src={project.image} alt={project.title} />
 
-            <h3>{project.title}</h3>
+            <div className="project-content">
+              <h3>{project.title}</h3>
 
-            <p>{project.description}</p>
+              <p>{project.description}</p>
+
+              <div className="project-buttons">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn github-btn"
+                >
+                  <FaGithub /> GitHub
+                </a>
+
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn demo-btn"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+              </div>
+            </div>
           </div>
         ))}
       </div>

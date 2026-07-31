@@ -1,0 +1,38 @@
+.stats {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  background: #f4f6f8;
+  text-align: center;
+}
+
+.stat-card {
+  background: white;
+  padding: 35px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.stat-card h2 {
+  font-size: 40px;
+  color: #1B4F72;
+  margin: 10px 0;
+}
+
+.stat-card p {
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+}
