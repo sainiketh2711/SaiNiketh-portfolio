@@ -1,14 +1,20 @@
 .navbar {
-  background-color: #1B4F72;
+  width: 100%;
+  background: #0b4f8a;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8%;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
-  color: white;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -19,13 +25,55 @@
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-size: 18px;
-  font-weight: 500;
   transition: 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #F18F01;
+  color: orange;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: #0b4f8a;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 0;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
 }
